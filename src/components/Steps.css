@@ -1,0 +1,29 @@
+.step-card {
+  background-image: url(../assets/images/bg-sidebar-desktop.svg);
+  background-repeat: no-repeat; /* Prevents the background image from repeating */
+  background-size: cover; /* Ensures the background image covers the entire container */
+  width: 300px;
+  padding: 20px;
+  height: 550px;
+}
+.step-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: 20px;
+  color: white;
+}
+.step-info {
+  margin-bottom: 20px;
+}
+.step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.step-card span {
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
