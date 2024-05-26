@@ -1,11 +1,11 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
-
-const NextStep = ({ to }) => {
-  const history = useHistory();
+import { useNavigate } from "react-router-dom";
+const NextStep = () => {
+  const navigate = useNavigate();
 
   function handleNextPage() {
-    history.push(to);
+    console.log("Next Page");
+    navigate("/select");
   }
 
   return (
