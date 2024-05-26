@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useHistory } from "react";
 
-const NextStep = () => {
-  return <div></div>;
+const NextStep = ({ to }) => {
+  const history = useHistory();
+
+  function handleNextPage() {
+    history.push(to);
+  }
+
+  return (
+    <div>
+      <button onClick={handleNextPage} className="next-step">
+        Next Step
+      </button>
+    </div>
+  );
 };
 
 export default NextStep;

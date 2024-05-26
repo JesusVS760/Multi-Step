@@ -1,6 +1,7 @@
 import React from "react";
 import "./Personal.css";
 import Steps from "../components/Steps";
+import NextStep from "../components/NextStep";
 
 const Personal = () => {
   return (
@@ -29,6 +30,9 @@ const Personal = () => {
         </div>
       </div>
       <div className="next-step"></div>
+      <div className="next-step-button">
+        <NextStep to="/select" />
+      </div>
     </div>
   );
 };

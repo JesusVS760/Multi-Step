@@ -1,12 +1,18 @@
 import React from "react";
-import Steps from "./components/Steps";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Personal from "./Pages/Personal";
+import Select from "./Pages/Select";
 
 const App = () => {
   return (
-    <div>
-      <Personal />
-    </div>
+    <Router>
+      <div>
+        <Switch>
+          <Route exact path="/" component={Personal} />
+          <Route path="/select" component={Select} />
+        </Switch>
+      </div>
+    </Router>
   );
 };
 
