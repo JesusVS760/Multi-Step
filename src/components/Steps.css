@@ -4,26 +4,30 @@
   background-size: cover; /* Ensures the background image covers the entire container */
   width: 300px;
   padding: 20px;
-  height: 550px;
+  height: 600px;
 }
 .step-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin-right: 20px;
   color: white;
-}
-.step-info {
-  margin-bottom: 20px;
+  padding: 10px;
+  text-transform: uppercase;
 }
 .step {
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
-.step-card span {
+.step-content button {
   padding: 10px;
-  border: 1px solid white;
+  border: 2px solid white;
   border-radius: 50%;
+  margin-right: 15px;
+  background: transparent;
+  color: white;
+  margin-bottom: 10px;
+}
+.steps {
+  color: hsl(231, 11%, 63%);
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-bottom: 2px;
 }

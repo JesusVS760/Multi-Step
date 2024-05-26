@@ -7,37 +7,37 @@ const Steps = () => {
       <div className="step-content">
         <div className="step1 step">
           <div className="step-image">
-            <span>1</span>
+            <button>1</button>
           </div>
           <div className="step-info">
-            <h3>step 1</h3>
+            <h3 className="steps">step 1</h3>
             <h2>your info</h2>
           </div>
         </div>
         <div className="step2 step">
           <div className="step-image">
-            <span>2</span>
+            <button>2</button>
           </div>
           <div className="step-info">
-            <h3>step 2</h3>
+            <h3 className="steps">step 2</h3>
             <h2>select plan</h2>
           </div>
         </div>
         <div className="step3 step">
           <div className="step-image">
-            <span>3</span>
+            <button>3</button>
           </div>
           <div className="step-info">
-            <h3>step 3</h3>
+            <h3 className="steps">step 3</h3>
             <h2>add-ons</h2>
           </div>
         </div>
         <div className="step4 step">
           <div className="step-image">
-            <span>4</span>
+            <button>4</button>
           </div>
           <div className="step-info">
-            <h3>step 4</h3>
+            <h3 className="steps">step 4</h3>
             <h2>summary</h2>
           </div>
         </div>
