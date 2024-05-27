@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 0px 50px;
+  padding: 0px 75px;
   margin-bottom: 200px;
 }
 .personal-header {
@@ -31,6 +31,7 @@
   border: 1px solid hsl(231, 11%, 63%);
   border-radius: 7px;
 }
+
 .personal-input p {
   margin-top: 25px;
   color: hsl(213, 96%, 18%);
@@ -38,7 +39,9 @@
   margin-bottom: 5px;
 }
 .next-step-button {
-  display: flex;
-
-  margin-top: 10px;
+  margin-left: 55%;
+}
+.next-step-button button {
+  position: absolute;
+  margin-top: 75px;
 }

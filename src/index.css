@@ -5,3 +5,6 @@
   font-size: 16px;
   font-family: "Ubuntu", sans-serif;
 }
+body {
+  background-color: hsl(217, 100%, 97%);
+}

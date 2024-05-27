@@ -23,7 +23,7 @@ const Personal = () => {
             <p>Email Address</p>
             <input type="text" />
           </div>
-          <div className="personal-number">
+          <div className="personal-number button-push">
             <p>Phone Number</p>
             <input type="text" />
           </div>
