@@ -6,14 +6,18 @@ import pro from "../assets/images/icon-pro.svg";
 import "./Select.css";
 import NextStep from "../components/NextStep";
 const Select = () => {
-  const [isClicked, setIsClicked] = useState(false);
+  const [isClicked, setIsClicked] = useState({
+    arcadeOpt: false,
+    advancedOpt: false,
+    proOpt: false,
+  });
 
-  const handleClick = () => {
-    if (!isClicked) {
-      setIsClicked(true);
-    } else if (isClicked) {
-      setIsClicked(false);
-    }
+  const handleClick = (button) => {
+    setIsClicked((prevState) => ({
+      ...prevState,
+      [button]: !prevState[button],
+    }));
+    console.log(button);
   };
   return (
     <div className="select-container">
@@ -28,8 +32,8 @@ const Select = () => {
         <div className="select-billing-options">
           <div className="billing-option ">
             <button
-              className={isClicked ? "highlight" : ""}
-              onClick={handleClick}
+              className={isClicked.arcadeOpt ? "highlight" : ""}
+              onClick={() => handleClick("arcadeOpt")}
             >
               <img src={arcade} alt="arcade" />
               <div className="arcade-info">
@@ -40,8 +44,8 @@ const Select = () => {
           </div>
           <div className="billing-option">
             <button
-              className={isClicked ? "highlight" : ""}
-              onClick={handleClick}
+              className={isClicked.advancedOpt ? "highlight" : ""}
+              onClick={() => handleClick("advancedOpt")}
             >
               <img src={advanced} alt="advanced" />
               <div className="arcade-info">
@@ -52,8 +56,8 @@ const Select = () => {
           </div>
           <div className="billing-option">
             <button
-              className={isClicked ? "highlight" : ""}
-              onClick={handleClick}
+              className={isClicked.proOpt ? "highlight" : ""}
+              onClick={() => handleClick("proOpt")}
             >
               <img src={pro} alt="pro" />
               <div className="arcade-info">
