@@ -17,15 +17,15 @@ const Personal = () => {
         <div className="personal-input">
           <div className="personal-name">
             <p>Name</p>
-            <input type="text" />
+            <input type="text" placeholder="John Smith" />
           </div>
           <div className="personal-email">
             <p>Email Address</p>
-            <input type="text" />
+            <input type="text" placeholder="JohnSmith123@gmail.com" />
           </div>
           <div className="personal-number button-push">
             <p>Phone Number</p>
-            <input type="text" />
+            <input type="text" placeholder="e.g.+1 234 567 890" />
           </div>
         </div>
         <div className="next-step-button">

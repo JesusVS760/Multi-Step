@@ -4,7 +4,8 @@
   justify-content: center;
   /* margin-top: 100px; */
 }
-.personal-content {
+.personal-content,
+.select-content {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,17 +13,18 @@
   padding: 0px 75px;
   margin-bottom: 200px;
 }
-.personal-header {
+.personal-header,
+.select-header {
   display: flex;
   flex-direction: column;
   max-width: 500px;
 }
-.personal-header h1 {
+h1 {
   font-size: 2rem;
   color: hsl(213, 96%, 18%);
   margin-bottom: 10px;
 }
-.personal-header p {
+p {
   color: hsl(231, 11%, 63%);
 }
 .personal-content input {
@@ -44,4 +46,10 @@
 .next-step-button button {
   position: absolute;
   margin-top: 75px;
+}
+.step-content .step1 button {
+  background: hsl(206, 94%, 87%);
+  color: hsl(213, 96%, 18%);
+  font-weight: 700;
+  border: 1px solid hsl(206, 94%, 87%);
 }

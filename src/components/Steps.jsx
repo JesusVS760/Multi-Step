@@ -7,10 +7,10 @@ const Steps = () => {
       <div className="step-content">
         <div className="step1 step">
           <div className="step-image">
-            <button>1</button>
+            <button className="step1">1</button>
           </div>
           <div className="step-info">
-            <h3 className="steps">step 1</h3>
+            <h3 className="steps ">step 1</h3>
             <h2>your info</h2>
           </div>
         </div>
