@@ -28,10 +28,9 @@ const Personal = () => {
             <input type="text" />
           </div>
         </div>
-      </div>
-      <div className="next-step"></div>
-      <div className="next-step-button">
-        <NextStep to="/select" />
+        <div className="next-step-button">
+          <NextStep to={"/select"} />
+        </div>
       </div>
     </div>
   );

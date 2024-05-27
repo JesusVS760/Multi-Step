@@ -24,6 +24,7 @@
   background: transparent;
   color: white;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 .steps {
   color: hsl(231, 11%, 63%);
