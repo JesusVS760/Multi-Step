@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import Steps from "../components/Steps";
 import arcade from "../assets/images/icon-arcade.svg";
 import advanced from "../assets/images/icon-advanced.svg";
 import pro from "../assets/images/icon-pro.svg";
 import "./Select.css";
 import NextStep from "../components/NextStep";
-import highlight from "../hooks/highlight";
 const Select = () => {
+  const [isClicked, setIsClicked] = useState(false);
+
+  const handleClick = () => {
+    if (!isClicked) {
+      setIsClicked(true);
+    } else if (isClicked) {
+      setIsClicked(false);
+    }
+  };
   return (
     <div className="select-container">
       <div className="sidebar-container">
@@ -19,7 +27,10 @@ const Select = () => {
         </div>
         <div className="select-billing-options">
           <div className="billing-option ">
-            <button onClick={() => highlight(this)}>
+            <button
+              className={isClicked ? "highlight" : ""}
+              onClick={handleClick}
+            >
               <img src={arcade} alt="arcade" />
               <div className="arcade-info">
                 <h2>Arcade</h2>
@@ -28,7 +39,10 @@ const Select = () => {
             </button>
           </div>
           <div className="billing-option">
-            <button>
+            <button
+              className={isClicked ? "highlight" : ""}
+              onClick={handleClick}
+            >
               <img src={advanced} alt="advanced" />
               <div className="arcade-info">
                 <h2>Advanced</h2>
@@ -37,7 +51,10 @@ const Select = () => {
             </button>
           </div>
           <div className="billing-option">
-            <button>
+            <button
+              className={isClicked ? "highlight" : ""}
+              onClick={handleClick}
+            >
               <img src={pro} alt="pro" />
               <div className="arcade-info">
                 <h2>Pro</h2>
