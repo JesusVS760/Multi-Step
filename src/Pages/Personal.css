@@ -47,7 +47,7 @@ p {
   position: absolute;
   margin-top: 75px;
 }
-.step-content .step1 button {
+.step-content .active {
   background: hsl(206, 94%, 87%);
   color: hsl(213, 96%, 18%);
   font-weight: 700;

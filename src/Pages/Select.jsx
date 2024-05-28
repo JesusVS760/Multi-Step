@@ -27,7 +27,7 @@ const Select = () => {
   return (
     <div className="select-container">
       <div className="sidebar-container">
-        <Steps />
+        <Steps page={2} />
       </div>
       <div className="select-content">
         <div className="select-header">

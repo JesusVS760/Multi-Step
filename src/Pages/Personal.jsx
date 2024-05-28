@@ -7,7 +7,7 @@ const Personal = () => {
   return (
     <div className="personal-container">
       <div className="sidebar-container">
-        <Steps />
+        <Steps page={1} />
       </div>
       <div className="personal-content">
         <div className="personal-header">
