@@ -11,6 +11,7 @@ const Select = () => {
     advancedOpt: false,
     proOpt: false,
   });
+  const [isToggle, setIsToggle] = useState("");
 
   const handleClick = (button) => {
     setIsClicked((prevState) => ({
@@ -23,6 +24,10 @@ const Select = () => {
       ),
     }));
     console.log(button);
+  };
+  const handleToggle = () => {
+    if (isToggle === "") setIsToggle("change");
+    if (isToggle === "change") setIsToggle("");
   };
   return (
     <div className="select-container">
@@ -44,6 +49,10 @@ const Select = () => {
               <div className="arcade-info">
                 <h2>Arcade</h2>
                 <p>$9/mo</p>
+                <h4 className={isToggle === "change" ? "" : "yearly-promotion"}>
+                  {" "}
+                  2 months free
+                </h4>
               </div>
             </button>
           </div>
@@ -56,6 +65,10 @@ const Select = () => {
               <div className="arcade-info">
                 <h2>Advanced</h2>
                 <p>$12/mo</p>
+                <h4 className={isToggle === "change" ? "" : "yearly-promotion"}>
+                  {" "}
+                  2 months free
+                </h4>
               </div>
             </button>
           </div>
@@ -68,6 +81,10 @@ const Select = () => {
               <div className="arcade-info">
                 <h2>Pro</h2>
                 <p>$15/mo</p>
+                <h4 className={isToggle === "change" ? "" : "yearly-promotion"}>
+                  {" "}
+                  2 months free
+                </h4>
               </div>
             </button>
           </div>
@@ -75,7 +92,7 @@ const Select = () => {
         <div className="plan-option">
           <label class="switch">
             <h2>Monthly</h2>
-            <input type="checkbox" />
+            <input type="checkbox" onChange={handleToggle} />
             <span class="slider round"></span>
             <h2>Yearly</h2>
           </label>

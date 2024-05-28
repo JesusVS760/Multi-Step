@@ -80,3 +80,7 @@ input:checked + .slider:before {
 .billing-option .highlight {
   border: 1px solid hsl(243, 100%, 62%);
 }
+.billing-option h4 {
+  margin-top: 10px;
+  color: hsl(213, 96%, 18%);
+}
