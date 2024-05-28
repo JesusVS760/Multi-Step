@@ -26,7 +26,7 @@ const AddOns = () => {
             </button>
           </div>
           <div className="add-on-option">
-            <button>
+            <button className="button-content">
               <input type="checkbox" />
               <div className="add-on-text">
                 <h3>Larger storage</h3>
@@ -45,7 +45,7 @@ const AddOns = () => {
           </div>
         </div>
       </div>
-      <div className="next-step-button">
+      <div className="next-step-button-add-on">
         <PrevStep to="/select" />
         <NextStep to="/summary" />
       </div>
