@@ -91,3 +91,10 @@ input:checked + .slider:before {
   margin-top: 10px;
   color: hsl(213, 96%, 18%);
 }
+.promotion-bold {
+  color: hsl(213, 96%, 18%);
+  font-weight: 700;
+}
+.promotion-grayed {
+  color: hsl(231, 11%, 63%);
+}

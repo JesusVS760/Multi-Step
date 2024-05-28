@@ -5,6 +5,7 @@ import advanced from "../assets/images/icon-advanced.svg";
 import pro from "../assets/images/icon-pro.svg";
 import "./Select.css";
 import NextStep from "../components/NextStep";
+import PrevStep from "../components/PrevStep";
 const Select = () => {
   const [isClicked, setIsClicked] = useState({
     arcadeOpt: false,
@@ -90,16 +91,31 @@ const Select = () => {
           </div>
         </div>
         <div className="plan-option">
-          <h2 className="switch-monthly">Monthly</h2>
+          <h2
+            className={
+              isToggle === "change" ? "promotion-grayed" : "promotion-bold"
+            }
+          >
+            Monthly
+          </h2>
 
           <label class="switch">
             <input type="checkbox" onChange={handleToggle} />
             <span class="slider round"></span>
           </label>
-          <h2>Yearly</h2>
+          <h2
+            className={
+              isToggle === "change" ? "promotion-bold" : "promotion-grayed"
+            }
+          >
+            Yearly
+          </h2>
         </div>
         <div className="next-step-button">
           <NextStep />
+        </div>
+        <div className="prev-step-button">
+          <PrevStep />
         </div>
       </div>
     </div>
