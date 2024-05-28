@@ -112,8 +112,8 @@ const Select = () => {
           </h2>
         </div>
         <div className="next-step-button">
-          <PrevStep />
-          <NextStep />
+          <PrevStep to="/" />
+          <NextStep to="/add-ons" />
         </div>
       </div>
     </div>
