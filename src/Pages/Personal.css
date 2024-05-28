@@ -41,12 +41,12 @@ p {
   margin-bottom: 5px;
 }
 .next-step-button {
-  margin-left: 55%;
-}
-.next-step-button button {
   position: absolute;
-  margin-top: 75px;
+  display: flex;
+  margin-top: 525px;
+  gap: 250px;
 }
+
 .step-content .active {
   background: hsl(206, 94%, 87%);
   color: hsl(213, 96%, 18%);

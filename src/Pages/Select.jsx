@@ -112,10 +112,8 @@ const Select = () => {
           </h2>
         </div>
         <div className="next-step-button">
-          <NextStep />
-        </div>
-        <div className="prev-step-button">
           <PrevStep />
+          <NextStep />
         </div>
       </div>
     </div>

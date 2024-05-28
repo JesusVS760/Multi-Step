@@ -1,1 +1,10 @@
-
+.prev-step-container button {
+  padding: 12px 15px;
+  border: none;
+  outline: none;
+  color: hsl(231, 11%, 63%);
+  font-weight: 400;
+  border-radius: 6px;
+  cursor: pointer;
+  background: transparent;
+}

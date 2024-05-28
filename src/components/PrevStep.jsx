@@ -1,5 +1,5 @@
 import React from "react";
-import "./PrevStep";
+import "./PrevStep.css";
 
 const PrevStep = () => {
   return (
