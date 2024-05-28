@@ -27,8 +27,7 @@ const Select = () => {
     console.log(button);
   };
   const handleToggle = () => {
-    if (isToggle === "") setIsToggle("change");
-    if (isToggle === "change") setIsToggle("");
+    setIsToggle(isToggle === "" ? "change" : "");
   };
   return (
     <div className="select-container">
