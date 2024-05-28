@@ -90,12 +90,13 @@ const Select = () => {
           </div>
         </div>
         <div className="plan-option">
+          <h2 className="switch-monthly">Monthly</h2>
+
           <label class="switch">
-            <h2>Monthly</h2>
             <input type="checkbox" onChange={handleToggle} />
             <span class="slider round"></span>
-            <h2>Yearly</h2>
           </label>
+          <h2>Yearly</h2>
         </div>
         <div className="next-step-button">
           <NextStep />
