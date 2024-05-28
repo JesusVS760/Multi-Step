@@ -14,8 +14,13 @@ const Select = () => {
 
   const handleClick = (button) => {
     setIsClicked((prevState) => ({
-      ...prevState,
-      [button]: !prevState[button],
+      ...Object.fromEntries(
+        // converts the state object into an array of key-value pairs
+        Object.entries(prevState).map(([key, value]) => [
+          key,
+          key === button ? !value : false,
+        ])
+      ),
     }));
     console.log(button);
   };

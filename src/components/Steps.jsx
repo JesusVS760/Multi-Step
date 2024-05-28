@@ -16,7 +16,7 @@ const Steps = () => {
         </div>
         <div className="step2 step">
           <div className="step-image">
-            <button>2</button>
+            <button className="step2">2</button>
           </div>
           <div className="step-info">
             <h3 className="steps">step 2</h3>
@@ -25,7 +25,7 @@ const Steps = () => {
         </div>
         <div className="step3 step">
           <div className="step-image">
-            <button>3</button>
+            <button className="step3">3</button>
           </div>
           <div className="step-info">
             <h3 className="steps">step 3</h3>
@@ -34,7 +34,7 @@ const Steps = () => {
         </div>
         <div className="step4 step">
           <div className="step-image">
-            <button>4</button>
+            <button className="step4">4</button>
           </div>
           <div className="step-info">
             <h3 className="steps">step 4</h3>
