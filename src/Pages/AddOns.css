@@ -32,8 +32,7 @@
 .add-on-option button input {
   margin-right: 10px;
 }
-.add-on-option {
-}
+
 .add-on-text {
   display: flex;
   flex-direction: column;

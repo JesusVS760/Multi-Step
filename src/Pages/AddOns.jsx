@@ -4,7 +4,6 @@ import PrevStep from "../components/PrevStep";
 import NextStep from "../components/NextStep";
 import "./AddOns.css";
 import useToggle from "../hooks/useToggle";
-
 const AddOns = () => {
   const { isClicked, handleClick } = useToggle();
 
