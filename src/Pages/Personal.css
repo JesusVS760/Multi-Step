@@ -55,3 +55,6 @@ p {
   font-weight: 700;
   border: 1px solid hsl(206, 94%, 87%);
 }
+.add-on-option button input {
+  padding: 10px;
+}

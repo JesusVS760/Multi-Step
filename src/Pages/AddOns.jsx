@@ -3,8 +3,11 @@ import Steps from "../components/Steps";
 import PrevStep from "../components/PrevStep";
 import NextStep from "../components/NextStep";
 import "./AddOns.css";
+import useToggle from "../hooks/useToggle";
 
 const AddOns = () => {
+  const { isClicked, handleClick } = useToggle();
+
   return (
     <div className="add-ons-container">
       <div className="sidebar-container">
@@ -17,7 +20,10 @@ const AddOns = () => {
         </div>
         <div className="add-on-options">
           <div className="add-on-option">
-            <button>
+            <button
+              onClick={() => handleClick("onlineService")}
+              className={isClicked.onlineService ? "highlight" : false}
+            >
               <input type="checkbox" />
               <div className="add-on-text">
                 <h3>Online service</h3>
@@ -26,7 +32,10 @@ const AddOns = () => {
             </button>
           </div>
           <div className="add-on-option">
-            <button className="button-content">
+            <button
+              onClick={() => handleClick("LargerStorage")}
+              className={isClicked.LargerStorage ? "highlight" : false}
+            >
               <input type="checkbox" />
               <div className="add-on-text">
                 <h3>Larger storage</h3>
@@ -35,7 +44,10 @@ const AddOns = () => {
             </button>
           </div>
           <div className="add-on-option">
-            <button>
+            <button
+              onClick={() => handleClick("customizableProfile")}
+              className={isClicked.customizableProfile ? "highlight" : false}
+            >
               <input type="checkbox" />
               <div className="add-on-text">
                 <h3>Customizable Profile</h3>

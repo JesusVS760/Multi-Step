@@ -49,3 +49,6 @@
   gap: 325px;
   margin-left: 300px;
 }
+.add-on-option .highlight {
+  border: 1px solid hsl(243, 100%, 62%);
+}

@@ -6,26 +6,14 @@ import pro from "../assets/images/icon-pro.svg";
 import "./Select.css";
 import NextStep from "../components/NextStep";
 import PrevStep from "../components/PrevStep";
+import useToggle from "../hooks/useToggle";
+import "./Select.css";
+
 const Select = () => {
-  const [isClicked, setIsClicked] = useState({
-    arcadeOpt: false,
-    advancedOpt: false,
-    proOpt: false,
-  });
+  const { isClicked, handleClick } = useToggle();
+
   const [isToggle, setIsToggle] = useState("");
 
-  const handleClick = (button) => {
-    setIsClicked((prevState) => ({
-      ...Object.fromEntries(
-        // converts the state object into an array of key-value pairs
-        Object.entries(prevState).map(([key, value]) => [
-          key,
-          key === button ? !value : false,
-        ])
-      ),
-    }));
-    console.log(button);
-  };
   const handleToggle = () => {
     setIsToggle(isToggle === "" ? "change" : "");
   };
