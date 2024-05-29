@@ -24,7 +24,11 @@ const AddOns = () => {
               onClick={() => handleClick("onlineService")}
               className={isClicked.onlineService ? "highlight" : false}
             >
-              <input type="checkbox" />
+              <input
+                type="checkbox"
+                readOnly
+                checked={isClicked.onlineService}
+              />
               <div className="add-on-text">
                 <h3>Online service</h3>
                 <p>Access to multiplayer games</p>
@@ -36,7 +40,11 @@ const AddOns = () => {
               onClick={() => handleClick("LargerStorage")}
               className={isClicked.LargerStorage ? "highlight" : false}
             >
-              <input type="checkbox" />
+              <input
+                type="checkbox"
+                readOnly
+                checked={isClicked.LargerStorage}
+              />
               <div className="add-on-text">
                 <h3>Larger storage</h3>
                 <p>Extra 1TB of cloud save</p>
@@ -48,7 +56,11 @@ const AddOns = () => {
               onClick={() => handleClick("customizableProfile")}
               className={isClicked.customizableProfile ? "highlight" : false}
             >
-              <input type="checkbox" />
+              <input
+                type="checkbox"
+                readOnly
+                checked={isClicked.customizableProfile}
+              />{" "}
               <div className="add-on-text">
                 <h3>Customizable Profile</h3>
                 <p>Custom theme on your profile</p>

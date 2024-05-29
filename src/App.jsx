@@ -10,9 +10,9 @@ const App = () => {
     <div className="app-container">
       <BrowserRouter>
         <Routes>
-          <Route index="/personal" element={<Personal />} />
-          <Route path="/select" element={<Select />} />
-          <Route path="/add-ons" element={<AddOns />} />
+          <Route index element={<Personal />} />
+          <Route path="select" element={<Select />} />
+          <Route path="add-ons" element={<AddOns />} />
         </Routes>
       </BrowserRouter>
     </div>
