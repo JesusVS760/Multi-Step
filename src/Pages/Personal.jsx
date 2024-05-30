@@ -21,7 +21,7 @@ const Personal = () => {
     return phoneRegex.test(phoneNumber);
   };
 
-  const [errors, setErrors] = useState();
+  const [errors, setErrors] = useState({});
 
   const validateForm = () => {
     let newErrors = {};
@@ -81,6 +81,7 @@ const Personal = () => {
               value={formData.name}
               placeholder="John Smith"
             />
+            {errors.name && <div className="errors">{errors.name}</div>}
           </div>
           <div className="personal-email">
             <p>Email Address</p>
@@ -91,22 +92,26 @@ const Personal = () => {
               value={formData.email}
               placeholder="JohnSmith123@gmail.com"
             />
+            {errors.email && <div className="errors">{errors.email}</div>}
           </div>
           <div className="personal-number button-push">
             <p>Phone Number</p>
+
             <input
               onChange={handleChange}
               name="phoneNumber"
               value={formData.phoneNumber}
               placeholder="e.g.+1 234 567 890"
             />
+            {errors.phoneNumber && (
+              <div className="errors">{errors.phoneNumber}</div>
+            )}
           </div>
-          {/* <button onSubmit={handleSubmit}>Submit</button> */}
-          <NextStep onClick={handleSubmit} to={"/select"} />
+          <div className="next-page">
+            <NextStep onClick={handleSubmit} to={"/select"} />
+          </div>
         </form>
-        <div className="next-step-button">
-          {/* <NextStep type="submit" to={"/select"} /> */}
-        </div>
+        <div className="next-step-button"></div>
       </div>
     </div>
   );
