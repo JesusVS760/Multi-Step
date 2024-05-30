@@ -16,15 +16,16 @@ const Personal = () => {
   };
 
   const isValidPhoneNumber = (phoneNumber) => {
-    const phoneRegex = /^[0-9]*^[()-]*$/;
+    const phoneRegex =
+      /^\+?([0-9]{1})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
     return phoneRegex.test(phoneNumber);
   };
 
   const [errors, setErrors] = useState();
 
-  let newErrors = {};
-
   const validateForm = () => {
+    let newErrors = {};
+
     if (!formData.name) {
       newErrors.name = "Name is required";
     }
@@ -48,7 +49,8 @@ const Personal = () => {
     const isValid = validateForm();
     if (isValid) {
       console.log("Form Submitted", formData);
-    } else {
+    }
+    if (!isValid) {
       console.log("Form Failed!");
     }
   };
@@ -70,7 +72,7 @@ const Personal = () => {
           <h1>Personal Info</h1>
           <p>Please provide your name, email address, and phone number.</p>
         </div>
-        <form onSubmit={handleSubmit} className="personal-input">
+        <form onClick={handleSubmit} className="personal-input">
           <div className="personal-name">
             <p>Name</p>
             <input
@@ -94,14 +96,13 @@ const Personal = () => {
             <p>Phone Number</p>
             <input
               onChange={handleChange}
-              type="number"
               name="phoneNumber"
               value={formData.phoneNumber}
               placeholder="e.g.+1 234 567 890"
             />
           </div>
-          <button type="submit">Submit</button>
-          <NextStep type="submit" to={"/select"} />
+          {/* <button onSubmit={handleSubmit}>Submit</button> */}
+          <NextStep onClick={handleSubmit} to={"/select"} />
         </form>
         <div className="next-step-button">
           {/* <NextStep type="submit" to={"/select"} /> */}

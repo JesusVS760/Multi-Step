@@ -1,21 +1,21 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./NextStep.css";
-const NextStep = ({ to, data }) => {
+const NextStep = ({ to, handleSubmit }) => {
   const navigate = useNavigate();
 
   function handleNextPage() {
+    console.log(handleSubmit);
     console.log("Next Page");
-    console.log(data);
     navigate(to);
   }
 
   return (
-    <div className="next-step-container">
-      <button type="submit" onClick={handleNextPage} className="next-step">
+    <form className="next-step-container">
+      <button onClick={handleNextPage} className="next-step">
         Next Step
       </button>
-    </div>
+    </form>
   );
 };
 
