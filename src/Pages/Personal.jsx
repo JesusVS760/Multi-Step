@@ -10,7 +10,48 @@ const Personal = () => {
     phoneNumber: "",
   });
 
-  const handleSubmit = () => {};
+  const isValidEmail = (email) => {
+    const emailRegex = /^[^@]+@[^@]+\.[^@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const isValidPhoneNumber = (phoneNumber) => {
+    const phoneRegex = /^[0-9]*^[()-]*$/;
+    return phoneRegex.test(phoneNumber);
+  };
+
+  const [errors, setErrors] = useState();
+
+  let newErrors = {};
+
+  const validateForm = () => {
+    if (!formData.name) {
+      newErrors.name = "Name is required";
+    }
+    if (!formData.email) {
+      newErrors.email = "Email is required";
+    } else if (!isValidEmail(formData.email)) {
+      newErrors.email = "Invalid email format";
+    }
+    if (!formData.phoneNumber) {
+      newErrors.phoneNumber = "Phone Number is required";
+    } else if (!isValidPhoneNumber(formData.phoneNumber)) {
+      newErrors.phoneNumber = "Phone number must be 10 digits";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const isValid = validateForm();
+    if (isValid) {
+      console.log("Form Submitted", formData);
+    } else {
+      console.log("Form Failed!");
+    }
+  };
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -53,12 +94,13 @@ const Personal = () => {
             <p>Phone Number</p>
             <input
               onChange={handleChange}
-              type="email"
+              type="number"
               name="phoneNumber"
               value={formData.phoneNumber}
               placeholder="e.g.+1 234 567 890"
             />
           </div>
+          <button type="submit">Submit</button>
           <NextStep type="submit" to={"/select"} />
         </form>
         <div className="next-step-button">
