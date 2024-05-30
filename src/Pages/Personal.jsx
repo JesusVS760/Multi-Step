@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Personal.css";
 import Steps from "../components/Steps";
 import NextStep from "../components/NextStep";
-import { useForm } from "react-hook-form";
 
 const Personal = () => {
-  const { register, handleSubmit } = useForm();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phoneNumber: "",
+  });
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const handleSubmit = () => {};
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
   };
 
   return (
@@ -21,23 +29,37 @@ const Personal = () => {
           <h1>Personal Info</h1>
           <p>Please provide your name, email address, and phone number.</p>
         </div>
-        <form onSubmit={handleSubmit(onSubmit)} className="personal-input">
+        <form onSubmit={handleSubmit} className="personal-input">
           <div className="personal-name">
             <p>Name</p>
-            <input {...register("name")} placeholder="John Smith" />
+            <input
+              onChange={handleChange}
+              name="name"
+              value={formData.name}
+              placeholder="John Smith"
+            />
           </div>
           <div className="personal-email">
             <p>Email Address</p>
             <input
-              {...register("email")}
+              onChange={handleChange}
+              name="email"
+              type="email"
+              value={formData.email}
               placeholder="JohnSmith123@gmail.com"
             />
           </div>
           <div className="personal-number button-push">
             <p>Phone Number</p>
-            <input {...register("phone")} placeholder="e.g.+1 234 567 890" />
+            <input
+              onChange={handleChange}
+              type="email"
+              name="phoneNumber"
+              value={formData.phoneNumber}
+              placeholder="e.g.+1 234 567 890"
+            />
           </div>
-          <NextStep data={data} to={"/select"} />
+          <NextStep type="submit" to={"/select"} />
         </form>
         <div className="next-step-button">
           {/* <NextStep type="submit" to={"/select"} /> */}
