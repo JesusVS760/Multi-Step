@@ -1,20 +1,19 @@
 // import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./NextStep.css";
-const NextStep = ({ to, handleSubmit }) => {
+const NextStep = ({ errors, to, handleSubmit }) => {
   const navigate = useNavigate();
-
   function handleNextPage() {
     console.log(handleSubmit);
     console.log("Next Page");
-    navigate(to);
+    if (!errors) {
+      navigate(to);
+    } else console.log("Form cannot proceed until errors are resolved!");
   }
 
   return (
     <form className="next-step-container">
-      <button onClick={handleNextPage} className="next-step">
-        Next Step
-      </button>
+      <button onClick={handleNextPage}>Next Step</button>
     </form>
   );
 };

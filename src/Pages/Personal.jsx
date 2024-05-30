@@ -108,7 +108,11 @@ const Personal = () => {
             )}
           </div>
           <div className="next-page">
-            <NextStep onClick={handleSubmit} to={"/select"} />
+            <NextStep
+              errors={validateForm}
+              onClick={handleSubmit}
+              to={"/select"}
+            />
           </div>
         </form>
         <div className="next-step-button"></div>
