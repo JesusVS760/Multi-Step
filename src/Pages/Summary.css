@@ -1,0 +1,18 @@
+.summary-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.summary-transaction {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  background-color: hsl(229, 24%, 87%);
+  padding: 25px;
+}
+.button-options {
+  position: absolute;
+  display: flex;
+  margin-top: 550px;
+  gap: 250px;
+}

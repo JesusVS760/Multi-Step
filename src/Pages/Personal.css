@@ -6,7 +6,8 @@
 }
 .personal-content,
 .select-content,
-.add-ons-content {
+.add-ons-content,
+.summary-content {
   display: flex;
   align-items: center;
   justify-content: center;

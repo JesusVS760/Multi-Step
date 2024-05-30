@@ -1,4 +1,5 @@
-.next-step-container button {
+.next-step-container button,
+.confirm-button {
   padding: 12px 15px;
   border: none;
   outline: none;
@@ -7,4 +8,9 @@
   font-weight: 400;
   border-radius: 6px;
   cursor: pointer;
+  transition: 0.3s ease;
+}
+.next-step-container button,
+.confirm-button:hover {
+  background-color: hsl(243, 100%, 62%);
 }

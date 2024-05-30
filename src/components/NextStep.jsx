@@ -6,9 +6,10 @@ const NextStep = ({ errors, to, handleSubmit }) => {
   function handleNextPage() {
     console.log(handleSubmit);
     console.log("Next Page");
-    if (!errors) {
+    if (errors) {
       navigate(to);
     } else console.log("Form cannot proceed until errors are resolved!");
+    navigate(to);
   }
 
   return (
