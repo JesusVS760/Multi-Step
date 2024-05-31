@@ -4,4 +4,11 @@
   justify-content: center;
 }
 .submitted-content {
+  margin-bottom: 20px;
+}
+.submitted-content p {
+  line-height: 2;
+}
+.submitted-paragraph {
+  max-width: 500px;
 }
