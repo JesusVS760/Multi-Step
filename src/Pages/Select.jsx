@@ -36,7 +36,7 @@ const Select = () => {
               <img src={arcade} alt="arcade" />
               <div className="arcade-info">
                 <h2>Arcade</h2>
-                <p>$9/mo</p>
+                <p>{isToggle === "change" ? "$90/yr" : "$9/mo"}</p>
                 <h4 className={isToggle === "change" ? "" : "yearly-promotion"}>
                   {" "}
                   2 months free
@@ -52,7 +52,7 @@ const Select = () => {
               <img src={advanced} alt="advanced" />
               <div className="arcade-info">
                 <h2>Advanced</h2>
-                <p>$12/mo</p>
+                <p> {isToggle === "change" ? "$120/yr" : "$12/mo"}</p>
                 <h4 className={isToggle === "change" ? "" : "yearly-promotion"}>
                   {" "}
                   2 months free
@@ -68,7 +68,7 @@ const Select = () => {
               <img src={pro} alt="pro" />
               <div className="arcade-info">
                 <h2>Pro</h2>
-                <p>$15/mo</p>
+                <p>{isToggle === "change" ? "$150/yr" : "$15/mo"}</p>
                 <h4 className={isToggle === "change" ? "" : "yearly-promotion"}>
                   {" "}
                   2 months free

@@ -7,7 +7,7 @@
   display: flex;
   align-items: start;
   flex-direction: column;
-  background-color: hsl(229, 24%, 87%);
+  background-color: hsl(217, 100%, 97%);
   padding: 25px;
 }
 .button-options {
@@ -15,4 +15,32 @@
   display: flex;
   margin-top: 550px;
   gap: 250px;
+}
+.summary-transaction {
+  width: 450px;
+  border-radius: 10px;
+}
+hr {
+  /* height: 1px;
+  background-color: #ed1d61; */
+}
+.summary-plan {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+.summary-add-ons {
+  display: flex;
+  padding: 10px 0;
+}
+.summary-header {
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+.option-price {
+}
+.summary-total {
+  display: flex;
+}
+.summary-total h2 {
 }
