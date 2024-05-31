@@ -35,34 +35,46 @@ const Summary = () => {
           <div className="summary-plan-choice">
             <div className="summary-plan">
               <h2>
-                {isClicked.arcadeOpt ? "Arcade" : ""}
-                {isClicked.advancedOpt ? "Advanced" : ""}
-                {isClicked.proOpt ? "Pro" : ""}
+                <div>{isClicked.arcadeOpt ? "Arcade" : ""}</div>
+                <div> {isClicked.advancedOpt ? "Advanced" : ""}</div>
+                <div>{isClicked.proOpt ? "Pro" : ""}</div>
               </h2>
-              <h3 className="option-price">
-                {isClicked.arcadeOpt ? "$9/mo" : ""}
-                {isClicked.advancedOpt ? "$12/mo" : ""}
-                {isClicked.proOpt ? "$15/mo" : ""}
-              </h3>
+              <a href="/select">Change</a>
             </div>
-            <a href="/select">Change</a>
+            <h3 className="option-price">
+              <div> {isClicked.arcadeOpt ? "$9/mo" : ""} </div>
+              <div> {isClicked.advancedOpt ? "$12/mo" : ""}</div>
+              <div> {isClicked.proOpt ? "$15/mo" : ""}</div>
+            </h3>
           </div>
           <hr />
           <div className="summary-add-ons">
-            <p>
-              {isClicked.onlineService ? "Online service" : ""}
-              {isClicked.LargerStorage ? "Larger storage" : ""}
-              {isClicked.customizableProfile ? "Customizable profile" : ""}
-            </p>
-            <p>
-              {isClicked.onlineService ? "+$1/mo" : ""}
-              {isClicked.LargerStorage ? "+$2/mo" : ""}
-              {isClicked.customizableProfile ? "+$3/mo" : ""}
-            </p>
+            <div>
+              <p>
+                <div> {isClicked.onlineService ? "Online service" : ""} </div>
+                <div> {isClicked.LargerStorage ? "Larger storage" : ""} </div>
+                <div>
+                  {" "}
+                  {isClicked.customizableProfile ? "Customizable profile" : ""}
+                </div>
+              </p>
+            </div>
+            <div>
+              <p>
+                <div>{isClicked.onlineService ? "+$1/mo" : ""} </div>
+                <div> {isClicked.LargerStorage ? "+$2/mo" : ""}</div>
+                <div>{isClicked.customizableProfile ? "+$3/mo" : ""}</div>
+              </p>
+            </div>
           </div>
+          <hr />
           <div className="summary-total">
-            <p>Total (per month)</p>
-            <h2>${totalPrice}</h2>
+            <div>
+              <p>Total (per month)</p>
+            </div>
+            <div>
+              <h2 className="total-price">+${totalPrice}/mo</h2>
+            </div>
           </div>
         </div>
         <div className="button-options">

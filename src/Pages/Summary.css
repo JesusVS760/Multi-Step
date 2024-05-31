@@ -5,7 +5,6 @@
 }
 .summary-transaction {
   display: flex;
-  align-items: start;
   flex-direction: column;
   background-color: hsl(217, 100%, 97%);
   padding: 25px;
@@ -17,30 +16,50 @@
   gap: 250px;
 }
 .summary-transaction {
-  width: 450px;
+  min-width: 500px;
   border-radius: 10px;
 }
 hr {
-  /* height: 1px;
-  background-color: #ed1d61; */
+  height: 1px;
 }
 .summary-plan {
   display: flex;
-  align-items: center;
-  padding: 10px 0;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px 0;
 }
 .summary-add-ons {
   display: flex;
-  padding: 10px 0;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
 }
+.summary-add-ons p div {
+  margin-bottom: 15px;
+}
+
 .summary-header {
   margin-right: auto;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
+  margin-top: 20px;
 }
 .option-price {
+  margin-left: auto;
 }
 .summary-total {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
 }
-.summary-total h2 {
+
+.summary-plan-choice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.total-price {
+  font-size: 1.5rem;
+  color: hsl(243, 100%, 62%);
 }
