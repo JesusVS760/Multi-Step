@@ -7,7 +7,8 @@
 .personal-content,
 .select-content,
 .add-ons-content,
-.summary-content {
+.summary-content,
+.submitted-content {
   display: flex;
   align-items: center;
   justify-content: center;

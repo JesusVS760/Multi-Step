@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Confirm.css";
+import { useNavigate } from "react-router-dom";
 
-const Confirm = () => {
+const Confirm = ({ to }) => {
+  const navigate = useNavigate();
+
+  const handleSubmitted = () => {
+    navigate(to);
+  };
+
   return (
-    <div className="confirm-container">
-      <button className="confirm-button">Confirm</button>
-    </div>
+    <>
+      <div>
+        <button className="confirm-button" onClick={handleSubmitted}>
+          Confirm
+        </button>
+      </div>
+    </>
   );
 };
 

@@ -79,7 +79,7 @@ const Summary = () => {
         </div>
         <div className="button-options">
           <PrevStep to={"/add-ons"} />
-          <Confirm />
+          <Confirm to={"/Submitted"} />
         </div>
       </div>
     </div>
