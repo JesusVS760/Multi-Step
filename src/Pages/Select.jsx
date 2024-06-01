@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Steps from "../components/Steps";
 import arcade from "../assets/images/icon-arcade.svg";
 import advanced from "../assets/images/icon-advanced.svg";
@@ -8,6 +8,7 @@ import NextStep from "../components/NextStep";
 import PrevStep from "../components/PrevStep";
 import useToggle from "../hooks/useToggle";
 import "./Select.css";
+// import usePlan from "../hooks/usePlan";
 
 const Select = () => {
   const { isClicked, handleClick } = useToggle();
@@ -17,6 +18,11 @@ const Select = () => {
   const handleToggle = () => {
     setIsToggle(isToggle === "" ? "change" : "");
   };
+
+  useEffect(() => {
+    localStorage.setItem("plan", JSON.stringify(isToggle));
+  }, [isToggle]);
+
   return (
     <div className="select-container">
       <div className="sidebar-container">
