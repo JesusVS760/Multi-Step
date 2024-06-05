@@ -6,12 +6,12 @@ import PrevStep from "../components/PrevStep";
 import Confirm from "../components/Confirm";
 import useToggle from "../hooks/useToggle";
 
-const Summary = () => {
+const Summary = ({ isToggle }) => {
   const { isClicked } = useToggle();
+  // const [isToggle, setIsToggle] = useState("");
 
   const totalPrice = useMemo(() => {
     let total = 0;
-
     if (isClicked.arcadeOpt) total += 9;
     if (isClicked.advancedOpt) total += 12;
     if (isClicked.proOpt) total += 15;

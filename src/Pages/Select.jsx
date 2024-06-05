@@ -7,17 +7,14 @@ import "./Select.css";
 import NextStep from "../components/NextStep";
 import PrevStep from "../components/PrevStep";
 import useToggle from "../hooks/useToggle";
+// import PlanContainer from "../components/PlanContainer";
 import "./Select.css";
-// import usePlan from "../hooks/usePlan";
-
-const Select = () => {
+const Select = ({ isToggle, handleToggle }) => {
   const { isClicked, handleClick } = useToggle();
 
-  const [isToggle, setIsToggle] = useState("");
-
-  const handleToggle = () => {
-    setIsToggle(isToggle === "" ? "change" : "");
-  };
+  // const handleToggle = () => {
+  //   setIsToggle(isToggle === "" ? "change" : "");
+  // };
 
   useEffect(() => {
     localStorage.setItem("plan", JSON.stringify(isToggle));
@@ -75,7 +72,7 @@ const Select = () => {
               <div className="arcade-info">
                 <h2>Pro</h2>
                 <p>{isToggle === "change" ? "$150/yr" : "$15/mo"}</p>
-                <h4 className={isToggle === "change" ? "" : "yearly-promotion"}>
+                <h4 className={isToggle ? "yearly-promotion" : ""}>
                   {" "}
                   2 months free
                 </h4>
