@@ -8,7 +8,11 @@ const PlanContainer = () => {
   };
   return (
     <>
-      <Select isToggle={isToggle} handleToggle={handleToggle} />
+      <Select
+        isToggle={isToggle}
+        setIsToggle={setIsToggle}
+        handleToggle={handleToggle}
+      />
       <Summary isToggle={isToggle} />
     </>
   );

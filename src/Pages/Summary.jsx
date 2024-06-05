@@ -42,9 +42,20 @@ const Summary = ({ isToggle }) => {
               <a href="/select">Change</a>
             </div>
             <h3 className="option-price">
-              <div> {isClicked.arcadeOpt ? "$9/mo" : ""} </div>
-              <div> {isClicked.advancedOpt ? "$12/mo" : ""}</div>
-              <div> {isClicked.proOpt ? "$15/mo" : ""}</div>
+              <div>
+                {" "}
+                {isClicked.arcadeOpt ? `${isToggle ? "90/yr" : "$9/mo"}` : ""}
+              </div>
+              <div>
+                {" "}
+                {isClicked.advancedOpt
+                  ? `${isToggle ? "120/yr" : "$12/mo"}`
+                  : ""}
+              </div>
+              <div>
+                {" "}
+                {isClicked.proOpt ? `${isToggle ? "120/yr" : "$12/mo"}` : ""}
+              </div>
             </h3>
           </div>
           <hr />
@@ -61,7 +72,11 @@ const Summary = ({ isToggle }) => {
             </div>
             <div>
               <p>
-                <div>{isClicked.onlineService ? "+$1/mo" : ""} </div>
+                <div>
+                  {isClicked.onlineService
+                    ? `${isToggle ? "+$1/yr" : "+$1/mo"}`
+                    : ""}{" "}
+                </div>
                 <div> {isClicked.LargerStorage ? "+$2/mo" : ""}</div>
                 <div>{isClicked.customizableProfile ? "+$3/mo" : ""}</div>
               </p>

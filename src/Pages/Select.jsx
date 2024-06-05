@@ -9,7 +9,7 @@ import PrevStep from "../components/PrevStep";
 import useToggle from "../hooks/useToggle";
 // import PlanContainer from "../components/PlanContainer";
 import "./Select.css";
-const Select = ({ isToggle, handleToggle }) => {
+const Select = ({ isToggle, handleToggle, setIsToggle }) => {
   const { isClicked, handleClick } = useToggle();
 
   // const handleToggle = () => {
@@ -72,7 +72,7 @@ const Select = ({ isToggle, handleToggle }) => {
               <div className="arcade-info">
                 <h2>Pro</h2>
                 <p>{isToggle === "change" ? "$150/yr" : "$15/mo"}</p>
-                <h4 className={isToggle ? "yearly-promotion" : ""}>
+                <h4 className={isToggle === "change" ? "" : "yearly-promotion"}>
                   {" "}
                   2 months free
                 </h4>
